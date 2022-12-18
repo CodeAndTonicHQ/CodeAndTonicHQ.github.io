@@ -1,0 +1,554 @@
+<!-- jQuery 3 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Google Tag Manager  clean test -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TL2QLZH');</script>
+<!-- End Google Tag Manager -->
+
+<!-- LOCAL & LIVE DEV IF-ELSE -->
+<script>
+
+ // LOAD CSS FILE TO HEAD
+function addCSStoHead(cssFileName) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = cssFileName;
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+
+function isLocalhost() {
+    if( window.location.href.includes(":5757") ) {
+        console.log("LOCAL DEV. loading script from: http://127.0.0.1:5500/header.js ");
+        $.getScript("http://127.0.0.1:5500/header.js", function() {
+            console.log("local Script loaded and executed.");
+        // here you can use anything you defined in the loaded script
+        });
+
+        addCSStoHead("/style.css"); // load local css file
+        
+        
+    } else {
+        console.log("NOT LOCAL - load live public script file from: https://damy-ry.github.io/header.js");
+        $.getScript("https://codeandtonichq.github.io/header.js", function() {
+            console.log("live Script loaded and executed.");
+        // here you can use anything you defined in the loaded script
+        });
+        addCSStoHead("https://codeandtonichq.github.io/style.css"); // load live css file
+    }
+}
+
+
+// on dom ready load isLocalhost();
+$(document).ready(function() {
+    isLocalhost();
+});
+</script>
+
+<!-- LOCAL & LIVE DEV IF-ELSE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function parseURL() {
+  // Define the setCookie function
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + (value || '') + expires + '; path=/';
+  }
+
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL contains query parameters
+  if (url.indexOf('?') !== -1) {
+    // Get the query string from the URL
+    var queryString = url.split('?')[1];
+
+    // Split the query string into an array of key-value pairs
+    var params = queryString.split('&');
+
+    // Loop through the array of key-value pairs
+    for (var i = 0; i < params.length; i++) {
+      // Get the current key-value pair
+      var param = params[i].split('=');
+
+      // Get the name of the parameter
+      var name = param[0];
+
+      // Get the value of the parameter
+      var value = param[1];
+
+      // Check if the parameter is a UTM parameter
+      if (name.indexOf('utm_') === 0) {
+        // Set the parameter as a cookie
+        setCookie(name, value, 30);
+      }
+    }
+  }
+}
+
+// Fire the parseURL() function
+parseURL();
+  
+  
+  function addUTMParameters() {
+  // Define the getCookie function
+  function getCookie(name) {
+    var nameEQ = name + '=';
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Get the values of the utm_campaign and utm_source cookies
+  var utmCampaign = getCookie('utm_campaign');
+  var utmSource = getCookie('utm_source');
+  var utmMedium = getCookie('utm_medium');
+  var utmTerm = getCookie('utm_term');
+  var utmContent = getCookie('utm_content');
+
+  // Check if the utm_campaign cookie exists and has a value
+  if (utmCampaign) {
+    // Get the form field with the ID "text-a29010ba-1722-4a7b-a452-a6c17e26209b-field"
+    var field1 = document.getElementById('text-a29010ba-1722-4a7b-a452-a6c17e26209b-field');
+
+    // Check if the form field exists
+    if (field1) {
+      // Set the value of the form field to the value of the utm_campaign cookie
+      field1.value = utmCampaign;
+    }
+  }
+
+  // Check if the utm_source cookie exists and has a value
+  if (utmSource) {
+    // Get the form field with the ID "text-5c191650-57fa-4763-9091-688f315e9dfe-field"
+    var field2 = document.getElementById('text-5c191650-57fa-4763-9091-688f315e9dfe-field');
+
+    // Check if the form field exists
+    if (field2) {
+      // Set the value of the form field to the value of the utm_source cookie
+      field2.value = utmSource;
+    }
+  }
+
+    if (utmMedium) {
+    // Get the form field with the ID "text-5c191650-57fa-4763-9091-688f315e9dfe-field"
+    var field2 = document.getElementById('text-5ea0536a-3ecd-45e2-b783-9c357dc9c597-field');
+
+    // Check if the form field exists
+    if (field2) {
+      // Set the value of the form field to the value of the utm_source cookie
+      field2.value = utmMedium;
+    }
+  }
+
+
+    if (utmTerm) {
+    // Get the form field with the ID "text-5c191650-57fa-4763-9091-688f315e9dfe-field"
+    var field2 = document.getElementById('text-55dc23e4-3625-432e-bd32-bd2f9c3dc9ee-field');
+
+    // Check if the form field exists
+    if (field2) {
+      // Set the value of the form field to the value of the utm_source cookie
+      field2.value = utmTerm;
+    }
+  }
+
+    if (utmContent) {
+    // Get the form field with the ID "text-5c191650-57fa-4763-9091-688f315e9dfe-field"
+    var field2 = document.getElementById('text-a8cbfd85-9631-445b-b4d0-e42174d914d8-field');
+
+    // Check if the form field exists
+    if (field2) {
+      // Set the value of the form field to the value of the utm_source cookie
+      field2.value = utmContent;
+    }
+  }
+}
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+// Fire the addUTMParameters() function
+addUTMParameters();
+    
+});
+</script>
+
+<!-- iOS Top Bar background-->
+<!--
+<meta name="theme-color" content="#303030">
+<style>
+body{
+/*iOS Safari bottom bar background determined by body background*/
+  background:#303030 !important;
+  }
+</style>-->
+
+
+
+<script>
+//STRIPE PAYMENT LINKS FOR SQUARESPACE
+function purchaseButtonStripeCheck(href, text, url) {
+    //check if the url has the string
+    if(window.location.href.indexOf(url) > -1) {
+        $(document).ready(function() {
+            $('.sqs-add-to-cart-button-wrapper').append('<a href="' + href + '" class="purchase-stripe sqs-add-to-cart-button sqs-suppress-edit-mode sqs-button-element--primary" role="button" tabindex="0" data-dynamic-strings="" data-collection-id="5e6f57fbe095af7f341825c7" data-item-id="6320b49d78d404189edf0c3d" data-product-type="3" data-use-custom-label="false" data-original-label="Add To Cart" id="yui_3_17_2_1_1671384804027_265"><div class="sqs-add-to-cart-button-inner">' + text + '</div></a>');
+            //add code to hide sqs-add-to-cart-button  without the class purchase-stripe
+            $('.sqs-add-to-cart-button').not('.purchase-stripe').hide();
+        });
+    }
+}
+
+//STRIPE PAYMENT LINKS FOR ACUITY REDIRECTS
+purchaseButtonStripeCheck('https://buy.stripe.com/7sI7tl3uOakhbJKaFI', 'Buy via Stripe', 'acuity-scheduling-redirect');
+
+
+</script>
+
+
+<!--👂👂👂 Hubspot Form Submit listener by codeandtonic.com -->
+<script>
+var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+// Listen to message from child window
+eventer(messageEvent,function(e) {
+  var key = e.message ? "message" : "data";
+  var data = e[key];
+  //run function//
+  console.log("data");
+  console.log(data);
+
+    //Check if message received is for submitted form , with event name 'onFormSubmitted'
+  if( data.eventName.includes("onFormSubmitted")  &&  data.type.includes("hsFormCallback") ){
+  console.log(" ✅ HUBSPOOT - We have received a message from Hubspot form. EventName incldues 'onFormSubmitted' and data.type.includes('hsFormCallback'). Form has been submitted succesfully.");
+
+  
+ //Universal analytics inside gtag 2022
+     gtag('event', 'Hubspot Form Submitted', {
+      'event_category':'Hubspot Forms ',
+      'event_label': document.location.pathname,
+    'event_callback': function() {
+      console.log(" ✅ GTAG Callback – Hubspot GA event is successfully at: " + document.location.pathname);
+    }
+  });
+  }
+},false);
+</script>
+<!--👂👂👂 Hubspot Form Submit listener by codeandtonic.com -->
+
+
+<script>
+  
+  
+  
+
+$( document ).ready(function() {    
+    
+
+
+
+//select a heading that has a strike through (way for user to select a heading to be animated)
+var animatedH1 = $( "h1, h2, h3" ).has( "span[style*='line-through']" );
+
+
+//remove white-space:pre-wrap;
+animatedH1.css("white-space", "normal");
+
+//add a class so we can add CSS animations not for all headings, but only animated specific ones
+animatedH1.addClass("christophe-animated-text");
+
+// get the page breaked lines as array
+var animationArray = animatedH1.children("span")[0].innerHTML.split("<br>");
+
+//add the first line and a container for animated lines
+animatedH1.html(animationArray[0] + '<br><span class="container"></span>');
+
+
+//loop through lines and add them as span.word -tags
+for (var i = 1; i < animationArray.length; i++) { 
+    console.log(animationArray[i]); 
+    $("span.container").append("<span class='word'>" + animationArray[i] + "</span>");
+}
+
+
+///Animation JS
+//animoidaan
+var words = document.getElementsByClassName('word');
+var wordArray = [];
+var currentWord = 0;
+
+words[currentWord].style.opacity = 1;
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
+}
+
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  for (var i = 0; i < cw.length; i++) {
+    animateLetterOut(cw, i);
+  }
+  
+  for (var i = 0; i < nw.length; i++) {
+    nw[i].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, i);
+  }
+  
+  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+}
+
+function animateLetterOut(cw, i) {
+  setTimeout(function() {
+		cw[i].className = 'letter out';
+  }, i*45);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function() {
+		nw[i].className = 'letter in';
+  }, 340+(i*45));
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 3500);
+  
+  }); 
+</script>
+
+
+
+
+
+
+<!--verify fb business domain-->
+<meta name="facebook-domain-verification" content="gzcjexxcy5eiclbqpvy8wp5ua3hite" />
+
+<!--plausible-->
+<!--<script  data-domain="codeandtonic.com" src="https://plausible.io/js/plausible.js"></script>-->
+
+
+
+<!-- 
+DIGITAL PRODUCT VARIANTS / DEVELOPER MODE BUY BUTTON START 
+💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵
+-->
+
+<script>
+$( document ).ready(function() {
+    // weave your magic here.
+    var createDeveloperVersionPriceButton = function (normalPriceButtonText, unlimitedVersionButtonText){
+  var singleSitePrice = $(".sqs-money-native").html();
+  var unlimitedLicensePrice = $(".product-block .product-price").text().trim();
+  console.log(unlimitedLicensePrice);
+  var singleSiteLicenseText = "Buy for 1 site ";
+  var unlimitedLicenseText = "Buy unlimited version ";
+
+$(".ProductItem-details-checkout .sqs-add-to-cart-button .sqs-add-to-cart-button-inner").html(singleSiteLicenseText + "<span class='digitalproductbuttonprice'>($" + singleSitePrice +  ")</span>" );
+
+$(".product-block .sqs-add-to-cart-button-inner").html(unlimitedLicenseText + "<span class='digitalproductbuttonprice'>($" + unlimitedLicensePrice +  ")</span>" );
+
+  $(".product-block .sqs-add-to-cart-button").css("margin-top", "10px").insertAfter(".ProductItem-details-checkout .sqs-add-to-cart-button");
+  $(".product-block").remove();
+}
+
+
+if(document.location.pathname.includes("/p/")){
+console.log("Is a product page — document.location.pathname.includes('/p/')");
+if($('.product-block').length){
+  console.log("There's a product block in the page so we'll assume it's the developer version");
+  if( $('.product-block .product-title').html().includes("Unlimited") ){
+    console.log("Product block title includes Unlimited");
+    createDeveloperVersionPriceButton();
+  } else{
+	console.log("Product title does not exists Unlimited");
+  }
+
+ } else {
+console.log("Product block does not exists");
+ }
+} else {
+console.log("not a product page");
+}
+
+}); // WINDOW LOAD END
+</script>
+
+<!-- 
+DIGITAL PRODUCT VARIANTS / DEVELOPER MODE BUY BUTTON END 
+💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵
+-->
+
+
+
+<!--code + tonic fixed bottom nav instead of shitty hamburger menu-->
+<script>
+$( document ).ready(function() {
+    $("body").append("<div class='codetonic-bottom-tab-nav'></div>");
+$(".header-display-desktop .header-nav-list").clone().prependTo(".codetonic-bottom-tab-nav");
+
+
+$(".header-nav-folder-title").click(function(){
+console.log("folder title click");
+event.preventDefault();
+$(this).parent().toggleClass("ct-folder-clicked-open");
+});
+ 
+}); 
+</script>
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Ads: 402734751 -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-402734751"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-402734751');
+  
+// javascript add to cart conversion
+$( document ).ready(function() {
+$(".sqs-add-to-cart-button").click(function(){
+  gtag('event', 'conversion', {'send_to': 'AW-402734751/2LwpCO_M34MDEJ_9hMAB'});
+  //alert("yes");
+});
+}); 
+
+</script>
+
+
+
+<!-- google optimize
+https://optimize.google.com/optimize/home/?authuser=0&hl=en-US#/accounts/4704535162/containers/14851083/experiments/9
+-->
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-5847H7B"></script>
+
+
+
+<!--cookiebot-->
+<!--
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="325fa6f7-c084-435e-bd7f-38a38c6212eb" data-blockingmode="auto" type="text/javascript"></script>
+
+<script id="CookieDeclaration" src="https://consent.cookiebot.com/325fa6f7-c084-435e-bd7f-38a38c6212eb/cd.js" type="text/javascript" async></script>
+-->
+
+
+<!--Custom JS for sublime text-->
+<!--
+<script src="https://voxpopagency.github.io/js/header.js"></script>
+-->
+
+
+
+
+
+<!-- Google Ads Reseller Trademark fixer
+1. Disclaimer HTML footerissa piilossa, jotta voi editoida yhdessä paikassa
+
+2) Eli Footerissa on dislaimer jossa sanotaan että 'ollaan reseller not affiliated' etc. Tän varmistaa että hakukonemainosten reseller policy on ok 
+https://support.google.com/adspolicy/answer/6118?hl=en
+
+Kun kamppis alkaa siirretään dissclaimeri footerista heti alkuun productexcerptiin, jotta varmasti näkee se ja hyväksyy
+Kun hyväksytty, ei tarvi featuroida niin isosti mut appendataan tuotesivun loppuun
+
+//❓❓❓
+pending = appendataan heti kärkeen et näkee
+eligible = appendataan kuvauksen loppuun.
+/// commentoitu pois = pysyy footerissa piilossa
+
+-->
+
+
+<script>
+ 
+function prependTrademarkDisclaimer(shopifyOrSquarespace, urlpart, pendingOrEligible){
+  if( window.location.href.includes("/p/") && window.location.href.includes(urlpart) ){
+    if (shopifyOrSquarespace.includes("uarespace")){
+      var trademarkBlockId = '#block-bf965d48ed3a4db6fa9f';
+      console.log("Squarespace trademark");
+    } else{
+      var trademarkBlockId = '#block-d72d86e108fa63dcedea';
+       console.log("Shopify trademark");
+    }
+    $( document ).ready(function() {
+      console.log("📱is product page");
+      if(pendingOrEligible == "pending"){
+        $(trademarkBlockId).prependTo(".ProductItem-details-excerpt");
+        $("<hr>").appendTo(trademarkBlockId);
+        
+      } else{
+      console.log("❗️❗️❗️❗️❗️❗️❗️DOWN ––DOWN DOWN")
+        $(trademarkBlockId).appendTo(".ProductItem .ProductItem-additional");
+      }
+    }); 
+  }
+}
+
+// usage prependTrademarkDisclaimer("shop/p/dark-mode-plugin-for-squarespace", "pending");
+  // usage prependTrademarkDisclaimer("shop/p/dark-mode-plugin-for-squarespace", "pending");
+prependTrademarkDisclaimer("Squarespace", "shop/p/dark-mode-plugin-for-squarespace", "eligible");
+prependTrademarkDisclaimer("Squarespace", "shop/p/full-width-blocks", "eligible");
+
+prependTrademarkDisclaimer("Shopify", "/shop/p/hide-sold-out-shopify-variants", "eligible");
+
+//prependTrademarkDisclaimer("Squarespace", "/shop/p/acuity-scheduling-redirect-forward-plugin", "eligible");
+
+</script>

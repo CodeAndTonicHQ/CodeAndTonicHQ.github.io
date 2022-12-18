@@ -1,0 +1,258 @@
+<script>
+/*
+SPAM FREE PHONE NUMBER DYNAMIC LINKS
+*/
+  // ⬜️ domready START
+$( document ).ready(function() {
+$( "a[href*='#phonelink']" ).attr("href", "tel:+3584578333315").html("+358 4578333315");
+}); 
+// ⬛️  domready END
+</script>
+
+
+<!--
+* BILINGUAL BRAD GOOD https://www.bradgood.net/articles/multi-language-content-on-any-squarespace-template
+* 
+*https://www.bradgood.net/articles/multi-language-squarespace-site-with-url-mapping
+*
+-->
+<!--
+<script>
+  $(function() { 
+  /* SETUP MULTI-LANGUAGE */
+  var defaultLanguage = 'en';
+  var lang = location.pathname.split("/")[1];
+  var defaultClass = 'lang-'+defaultLanguage+'';
+  var itemParent = "nav [class*='collection'],nav [class*='folder'],nav [class*='index'],nav [class*='group']";
+  if (lang == "" || lang.length > 2 ){
+    var lang = defaultLanguage;
+  }
+
+  /* ADD LANGUAGE CLASSES */
+  $('a[href="/"]').addClass('lang-'+defaultLanguage+'').parents(itemParent).addClass('lang-'+defaultLanguage+'');
+  $('nav a:link:not([href^="http://"]):not([href^="https://"])').each(function () {
+    var langType = $(this).attr('href').split("/")[1];
+    var multiLanguageClass = 'multilanguage lang-' + langType + '';
+    if (undefined !== langType && langType.length <= 2) 
+      $(this).addClass(multiLanguageClass).parents(itemParent).addClass(multiLanguageClass);
+  });
+  $('nav button').each(function () {
+    var langTypeFolder = $(this).attr('data-controller-folder-toggle').split("/")[0];
+    var multiLanguageClass = 'multilanguage lang-' + langTypeFolder + '';
+    if (undefined !== langTypeFolder && langTypeFolder.length <= 2) 
+      $(this).addClass(multiLanguageClass);
+  });
+
+  /* HOMEPAGE-LOGO LINKS TO PROPER LANGUAGE HOMEPAGE */
+  if (lang == "es") {
+    $('a[href="/"]').attr("href", "/es/inicio/");
+  }
+
+  /* ADD EXCLUSION NAV ITEMS */
+  $('.exclude-me,.exclude-me a').addClass('exclude');
+  $('.sqs-svg-icon--list a,.SocialLinks-link').addClass('exclude');
+
+  /* REMOVE OTHER LANGUAGES AND KEEP EXCLUDED ITEMS */
+  $('.multilanguage:not(".lang-'+lang+',.exclude")').remove();
+});
+</script>
+-->
+
+
+
+<!--Custom JS for sublime text-->
+<!--<script src="https://codetoniccnd.000webhostapp.com/code-tonic-footer.js"></script>-->
+
+
+
+
+
+
+
+
+<!--Click Tracking plugin by Vox Pop-->
+
+
+
+
+
+<!--
+SPAM FREE EMAIL LINKS GENERATOR
+*Create links with href that begins with '?email-'. 
+E.g: '?email-contant'  =>  'mailto:contact@example.com'
+-->
+
+
+<style>
+a[href^='@']::before {
+  content: "Please enable javascript in your browser";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+</style>
+
+<script>
+var spamfreeEmailDomain = "codeandtonic.com";
+
+$( document ).ready(function() {
+ // new version: href="@info"
+  $( "body a[href^='@']" ).each(function( index ) {
+    var fullEmail = $(this).attr("href").split("@")[1] + "@" + spamfreeEmailDomain;
+    $(this).text(fullEmail).attr( "href", "mailto:" + fullEmail ).addClass("spamfree-email-done").css({
+   'transition' : '1s opacity ease',
+   'opacity' : '1'
+    });;   
+  });
+ 
+ // old version: href="#email-info"
+      $( "body a[href^='#email']" ).each(function( index ) {
+    var fullEmail = $(this).attr("href").split("-")[1] + "@" + spamfreeEmailDomain;
+    $(this).text(fullEmail).attr( "href", "mailto:" + fullEmail ).addClass("spamfree-email-set").css({
+   'transition' : '1s opacity ease',
+   'opacity' : '1'
+    });;   
+  });
+  
+  
+    ga('send', {
+  hitType: 'event',
+  eventCategory: 'Email',
+  eventAction: 'Spam Free Email JS: Success',
+  eventLabel: 'This browser worked and had JS enabled',
+transport: 'beacon',
+      'hitCallback': function() {
+        console.log('Spam Free Email JS ANALYTICS: Success');
+      }
+});
+ 
+}); // DOM READY END
+
+</script>
+
+<!--END SPAM FREE EMAIL-->
+
+
+
+
+
+
+
+
+<!--REUSABLE BLOCKS INIT START-->
+
+
+<style>
+  /* Non-rendered Newsletter Blocks are hidden by default. Fix.*/
+  .vp-reusable-content .newsletter-block:not(.rendered) {
+  opacity:1 !important;
+  }
+</style>
+
+
+
+
+<!--
+TEST
+A3-HFZWKX-QLACJT-65KHA-J3NNY-6L8FJ-27AKE
+-->
+
+
+
+
+
+
+
+
+
+<!-- Facebook Messenger Chat Plugin Code 
+https://business.facebook.com/latest/inbox/chat_plugin?asset_id=101088858078403&business_id=281301938965265&nav_ref=bm_home_redirect&selected_item_id=100040323950602&folder=TODO&mailbox_id=101088858078403
+-->
+
+
+
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+<!--
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "101088858078403");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+-->
+
+
+
+
+<!--
+********************************************************
+FACEBOOK MESSENGER START
+********************************************************
+-->
+
+<!-- Load Facebook SDK for JavaScript -->
+
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+      <!-- Your Chat Plugin code -->
+
+<!--      <div class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="101088858078403"
+  logged_in_greeting="Chat via Facebook Messenger. "
+  logged_out_greeting="Chat via Facebook Messenger. ">
+      </div>-->
+
+
+
+
+<!--
+********************************************************
+FACEBOOK MESSENGER END
+********************************************************
+-->
+<script id="SCC-JS-script">
+/// This minified seems to be the pagination plugin by code connector
+console.log('test3'),$(document).ready(function(){var g=1e3,c=!0,d=!0,h=function(a,b){return a.length>b?a.substring(0,b)+'...':a};if(window.location.pathname.includes('/p/')&&$('.product-details').length){console.log('we\'re on a product page (url containts /p/ and we\'ve found .product-details');var i=$('.ProductItem-details-title').text().replace(/^\s+|\s+$/gm,'');console.log('CURRENT PRODUCT WE\'RE LOOKING AT: '+i);var a=[],b={};const j=window.location.pathname.split('/')[1];var e='/'+j+'?format=json-pretty';console.log('fetcurl: '+e),setTimeout(function(){$('body').hasClass('sqs-edit-mode')?(console.log('admin logged in'),$('<a target=\'_blank\' href=\''+e+'\'>Refresh product list (for admin only) by opening this in new tab</a>').appendTo('body')):console.log('admin not logged in. Normal visitor seeing the page')},1e3);var f=new Headers;document.location.host.includes('.squarespace.com')?(console.log('url contains .squarespace.com so we\'re assuming it\'s admin logged in and won\'t cache the product pagination fetch'),f.append('pragma','no-cache'),f.append('cache-control','no-cache')):console.log('url  DOES NOT contain .squarespace.com. Assuming its\' a visitor and will cache product pagination fetch to make everything quicker'),fetch(e,{method:'GET',headers:f}).then(function(a){return a.json()}).then(function(o){b=o.items,b.forEach(function(c){var b=c.title;a.push(b)});var n=a.indexOf(i),l=n-1;if(a[l]!==void 0){console.log('previous product exists'),console.log('previous = '+a[l]);var f=a[l],f=h(f,g);console.log(b[l].fullUrl);var e=b[l].fullUrl;console.log('prev link: '+e),console.log('PREVIOUS PRODUCT IS: '+f)}else console.log('previous undefined');var m=n+1;if(a[m]!==void 0){console.log('next product exists');var j=a[m],j=h(j,g);console.log(b[m].fullUrl);var k=b[m].fullUrl;console.log('next link: '+k),console.log('NEXT PRODUCT IS: '+j)}else console.log('next product undefined');e&&k?(console.log('next and previous'),d==1&&$('<section class="item-pagination item-pagination--prev-next" data-collection-type="portfolio-grid-overlay" data-controller="ItemPagination" data-controllers-bound="ItemPagination"> <a href="'+e+'" class="item-pagination-link item-pagination-link--prev"> <div class="item-pagination-icon icon icon--stroke"> <svg class="caret-left-icon--small" viewBox="0 0 9 16"> <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2"></polyline> </svg> </div><span class="pagination-title-wrapper"> <div class="visually-hidden">Previous</div><div class="item-pagination-prev-next">Previous</div><h2 class="item-pagination-title">'+f+'</h2> </span> </a> <a href="'+k+'" class="item-pagination-link item-pagination-link--next"> <div class="pagination-title-wrapper"> <div class="visually-hidden">Next</div><div class="item-pagination-prev-next">Next</div><h2 class="item-pagination-title">'+j+'</h2> </div><div class="item-pagination-icon icon icon--stroke"> <svg class="caret-right-icon--small" viewBox="0 0 9 16"> <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7"></polyline> </svg> </div></a> </section>').insertAfter('article.ProductItem'),c==1&&(console.log('simple pagination for next and prev'),$('<div class="ProductItem-next-prev-codeandtonic"> <a class="codetonic-product-pagination-link-simple codetonic-prev" href="'+e+'">Prev</a> <span class="ProductItem-nav-pagination-separator ProductItem-nav-pagination-separator--hasPrev ProductItem-nav-pagination-separator--hasNext"></span> <a class="codetonic-product-pagination-link-simple codetonic-next" href="'+k+'" >Next</a></div>').appendTo('.ProductItem-nav'))):e?(console.log('prev only'),c==1&&(console.log('simple pagination for prev only'),$('<div class="ProductItem-next-prev-codeandtonic"> <a class="codetonic-product-pagination-link-simple codetonic-prev" href="'+e+'">Prev</a>').appendTo('.ProductItem-nav')),d==1&&$('<section class="item-pagination item-pagination--prev-next" data-collection-type="portfolio-grid-overlay" data-controller="ItemPagination" data-controllers-bound="ItemPagination"> <a href="'+e+'" class="item-pagination-link item-pagination-link--prev"> <div class="item-pagination-icon icon icon--stroke"> <svg class="caret-left-icon--small" viewBox="0 0 9 16"> <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2"></polyline> </svg> </div><span class="pagination-title-wrapper"> <div class="visually-hidden">Previous</div><div class="item-pagination-prev-next">Previous</div><h2 class="item-pagination-title">'+f+'</h2> </span> </a> <a  style="display:none;" href="'+k+'" class="item-pagination-link item-pagination-link--next"> <div class="pagination-title-wrapper"> <div class="visually-hidden">Next</div><div style="display:none;" class="item-pagination-prev-next">Next</div><h2 class="item-pagination-title">'+j+'</h2> </div><div class="item-pagination-icon icon icon--stroke"><svg class="caret-right-icon--small" viewBox="0 0 9 16"> <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7"></polyline> </svg> </div></a> </section>').insertAfter('article.ProductItem')):(console.log('next only'),d==1&&$('<section class="item-pagination item-pagination--prev-next" data-collection-type="portfolio-grid-overlay" data-controller="ItemPagination" data-controllers-bound="ItemPagination"> <a style="display:none;" href="'+e+'" class="item-pagination-link item-pagination-link--prev"> <div class="item-pagination-icon icon icon--stroke"> <svg class="caret-left-icon--small" viewBox="0 0 9 16"> <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2"></polyline> </svg> </div><span class="pagination-title-wrapper"> <div class="visually-hidden">Previous</div><div class="item-pagination-prev-next">Previous</div><h2 class="item-pagination-title">'+f+'</h2> </span> </a> <a href="'+k+'" class="item-pagination-link item-pagination-link--next"> <div class="pagination-title-wrapper"> <div class="visually-hidden">Next</div><div class="item-pagination-prev-next">Next</div><h2 class="item-pagination-title">'+j+'</h2> </div><div class="item-pagination-icon icon icon--stroke"> <svg class="caret-right-icon--small" viewBox="0 0 9 16"> <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7"></polyline> </svg> </div></a> </section>').insertAfter('article.ProductItem'),c==1&&(console.log('simple pagination for nextonly'),$('<div class="ProductItem-next-prev-codeandtonic"><a class="codetonic-product-pagination-link-simple codetonic-next" href="'+k+'" >Next</a></div>').appendTo('.ProductItem-nav')))})}})
+
+
+//alert("test. sorry.");</script>

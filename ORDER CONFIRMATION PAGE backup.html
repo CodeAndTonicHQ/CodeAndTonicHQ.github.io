@@ -1,0 +1,153 @@
+<!--plausible conversion-->
+<script>
+//plausible('Purchase', {props: {orderID: '{orderId}', orderGrandTotal: {orderGrandTotal}}});
+</script>
+
+
+<!-- 🟢TYPEFORM ORDER CONFIRMED https://admin.typeform.com/form/IUg2o4ty/create -->
+<!--
+<div data-tf-widget="IUg2o4ty" data-tf-hide-headers data-tf-iframe-props="title=Order Confirmed Form" data-tf-hidden="email_from_order_confirmation={customerEmailAddress}" style="width:100%;height:530px;"></div><script src="//embed.typeform.com/next/embed.js"></script>
+<script>
+// ⬜️ domready START
+$( document ).ready(function() {
+$( "div[data-tf-widget='IUg2o4ty']" ).appendTo("#confirmed-page");    
+
+// SCroll to typeform
+  setTimeout(function(){
+
+  $([document.documentElement, document.body]).animate({
+        scrollTop: $("div[data-tf-widget='IUg2o4ty']").offset().top-80
+    }, 300);
+    
+/*
+    $('html, body').animate({scrollTop: $("div[data-tf-widget='IUg2o4ty']").offset().top -100 }, 'fast');
+    */
+ }, 1000);
+ 
+    
+}); 
+// ⬛️  domready END
+</script>
+-->
+
+<!--🔴TYPEFORM-->
+
+
+
+
+<!--🎅🎅🎅🎅🎅🎅GTM PURCHASE CUSTOM EVENT-->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+'event': 'orderConfirmed',
+'orderId': '{orderId}',
+'conversionValue': {orderGrandTotal}
+});
+</script>
+<!--🎅🎅🎅🎅🎅🎅GTM PURCHASE CUSTOM EVENT-->
+
+
+
+
+
+<!--
+*********************
+Perfect Audience start
+*********************
+-->
+
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+     _pa.orderId = {orderId}; // OPTIONAL: attach unique conversion identifier to conversions
+     _pa.revenue = {orderGrandTotal}; // OPTIONAL: attach dynamic purchase values to conversions
+    // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+        
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/5755847e19deca16d8000071.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+
+
+
+<!--
+*********************
+Perfect Audience END
+*********************
+-->
+
+
+
+
+
+<script>
+var sqsCheckoutCustomerEmailAddress = "{customerEmailAddress}";
+var orderConfirmedObject = "";
+
+$( document ).ready(function() {
+ 
+// TODO .includes selainsupportti on vain uudet. Ei toimi IE !!!
+var checkoutPageAnalyticsScript = "";
+
+//TODO, lisää tähän scriptiin myös joku vastaava ku data-name ja excludee se myäs. 
+
+$( "#page .system-page script" ).each(function( index ) {
+	if( $(this ).text().includes('squarespace-commerce-analytics') ){
+		checkoutPageAnalyticsScript = $( this ).text().replace(/\s+/g, '');
+		//console.log(checkoutPageAnalyticsScript);
+	};
+});
+
+orderConfirmedObject = JSON.parse(checkoutPageAnalyticsScript.match(/(?<=Y=YUI\(YUI_CONFIG\).use\('squarespace-commerce-analytics',function\(Y\){Y.on\('domready',function\(\)\{Y.Squarespace.CommerceAnalytics.checkoutConfirmed\()(.*)(?=\);\}\);\}\);)/)[0]);
+
+console.log(orderConfirmedObject);
+
+//testing
+$("h1").html(orderConfirmedObject.orderNumber);
+  
+  var purchasedItems = orderConfirmedObject.items;
+  console.log("purcghased: " + purchasedItems);
+  
+  $.each(purchasedItems, function( key, value ) {
+	//console.log("SKU:" + value.sku);
+	// generate button with link url and password from SKU (with utm code or something else to distinguish source)?
+    if(value.sku){
+      if(value.sku.startsWith("*")) {
+        console.log(value.sku);
+        //Is digital service producxrt
+        var skuPartsArray = value.sku.split("*");
+        //console.log(skuPartsArray);
+
+        var skuProductName = skuPartsArray[1];
+        console.log("skuProductName " + skuProductName);
+        var skuProductUrl= skuPartsArray[2];
+                console.log("skuProductUrl " + skuProductUrl);
+
+        //TODO if has password, show password. If not. just link!
+        var skuProductPassword= skuPartsArray[3];
+                        console.log("skuProductPassword " + skuProductPassword);
+
+        //1. Create links to page
+        $( document ).ready(function() {
+    			$("#confirmed-page").prepend("<div id='servicedownloadproduct'><h2>Download purchase:</h2><!--<h3>Get " + skuProductName + ":</h3>--><!--Copy the password and click the button.<br>--><strong>Password:</strong> "+ skuProductPassword +"</p><p><a target='_blank' href='" + skuProductUrl +"'>Download " + skuProductName +  " here</a></p></div>");
+        });
+
+				// 2. Send download link to email (https://zapier.com/app/editor/70787686/nodes/70787688/sample)
+				fetch("https://hooks.zapier.com/hooks/catch/3467746/o6g6dun/", {  
+				    method: 'POST', 
+				     body: JSON.stringify({digitalDownloadProductName: skuProductName,  digitalDownloadLink: skuProductUrl, digitalDownloadpassword: skuProductPassword, customerEmail: sqsCheckoutCustomerEmailAddress })
+				})
+				.then(function (data) {  
+				  console.log('Request success: ', data);  
+				})  
+				.catch(function (error) {  
+				  console.log('Request failure: ', error);  
+				});
+      }
+    } 
+  });
+});//domready
+
+
+</script>
