@@ -286,3 +286,155 @@ $( document ).ready(function() {
 
   
 }); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * DIGITAL PRODUCT VARIANTS / DEVELOPER MODE BUY BUTTON START 
+ * 💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵
+ */
+
+/*
+
+$( document ).ready(function() {
+  // weave your magic here.
+  var createDeveloperVersionPriceButton = function (normalPriceButtonText, unlimitedVersionButtonText){
+var singleSitePrice = $(".sqs-money-native").html();
+var unlimitedLicensePrice = $(".product-block .product-price").text().trim();
+console.log(unlimitedLicensePrice);
+var singleSiteLicenseText = "Buy for 1 site ";
+var unlimitedLicenseText = "Buy unlimited version ";
+
+$(".ProductItem-details-checkout .sqs-add-to-cart-button .sqs-add-to-cart-button-inner").html(singleSiteLicenseText + "<span class='digitalproductbuttonprice'>($" + singleSitePrice +  ")</span>" );
+
+$(".product-block .sqs-add-to-cart-button-inner").html(unlimitedLicenseText + "<span class='digitalproductbuttonprice'>($" + unlimitedLicensePrice +  ")</span>" );
+
+$(".product-block .sqs-add-to-cart-button").css("margin-top", "10px").insertAfter(".ProductItem-details-checkout .sqs-add-to-cart-button");
+$(".product-block").remove();
+}
+
+
+if(document.location.pathname.includes("/p/")){
+console.log("Is a product page — document.location.pathname.includes('/p/')");
+if($('.product-block').length){
+console.log("There's a product block in the page so we'll assume it's the developer version");
+if( $('.product-block .product-title').html().includes("Unlimited") ){
+  console.log("Product block title includes Unlimited");
+  createDeveloperVersionPriceButton();
+} else{
+console.log("Product title does not exists Unlimited");
+}
+
+} else {
+console.log("Product block does not exists");
+}
+} else {
+console.log("not a product page");
+}
+
+}); // WINDOW LOAD END
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * code + tonic fixed bottom nav instead of shitty hamburger menu
+ */
+
+/*
+  $( document ).ready(function() {
+    $("body").append("<div class='codetonic-bottom-tab-nav'></div>");
+  $(".header-display-desktop .header-nav-list").clone().prependTo(".codetonic-bottom-tab-nav");
+
+
+  $(".header-nav-folder-title").click(function(){
+  console.log("folder title click");
+  event.preventDefault();
+  $(this).parent().toggleClass("ct-folder-clicked-open");
+  });
+
+  }); 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * TradeMark Disclaimer Google Ads Stuff
+ */
+
+
+function prependTrademarkDisclaimer(shopifyOrSquarespace, urlpart, pendingOrEligible){
+  if( window.location.href.includes("/p/") && window.location.href.includes(urlpart) ){
+    if (shopifyOrSquarespace.includes("uarespace")){
+      var trademarkBlockId = '#block-bf965d48ed3a4db6fa9f';
+      console.log("Squarespace trademark");
+    } else{
+      var trademarkBlockId = '#block-d72d86e108fa63dcedea';
+       console.log("Shopify trademark");
+    }
+    $( document ).ready(function() {
+      console.log("📱is product page");
+      if(pendingOrEligible == "pending"){
+        console.log("❗️❗️❗️❗️❗️❗️❗️ is pending");
+        $(trademarkBlockId).prependTo(".ProductItem-details-excerpt");
+        $("<hr>").appendTo(trademarkBlockId);
+        
+      } else{
+      console.log("❗️❗️❗️❗️❗️❗️❗️DOWN ––DOWN DOWN")
+        $(trademarkBlockId).appendTo(".ProductItem .ProductItem-additional");
+      }
+    }); 
+  }
+}
+
+
+prependTrademarkDisclaimer("Squarespace", "shop/p/dark-mode-plugin-for-squarespace", "eligible");
+prependTrademarkDisclaimer("Squarespace", "shop/p/full-width-blocks", "eligible");
+prependTrademarkDisclaimer("Shopify", "/shop/p/hide-sold-out-shopify-variants", "eligible");
+//prependTrademarkDisclaimer("Squarespace", "/shop/p/acuity-scheduling-redirect-forward-plugin", "eligible");
