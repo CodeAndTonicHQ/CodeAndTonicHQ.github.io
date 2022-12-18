@@ -31,7 +31,6 @@ purchaseButtonStripeCheck('https://buy.stripe.com/7sI7tl3uOakhbJKaFI', 'Buy via 
 
 
 
-
 /**
  * 
  * Utm Tracking to cookie and form (VS CODE COPILOT PROJECT) FOR /form test PAGE
@@ -183,3 +182,107 @@ $( document ).ready(function() {
 
 
 
+
+
+
+
+/**
+ * ANIMATED HOMEPAGE HEADING TEXT
+ */
+
+
+$( document ).ready(function() {    
+    
+
+  //select a heading that has a strike through (way for user to select a heading to be animated)
+  var animatedH1 = $( "h1, h2, h3" ).has( "span[style*='line-through']" );
+
+  // if there is a animatedH1 on the page
+  if (animatedH1.length) {
+
+  
+  //remove white-space:pre-wrap;
+  animatedH1.css("white-space", "normal");
+  
+  //add a class so we can add CSS animations not for all headings, but only animated specific ones
+  animatedH1.addClass("christophe-animated-text");
+  
+  // get the page breaked lines as array
+  var animationArray = animatedH1.children("span")[0].innerHTML.split("<br>");
+  
+  //add the first line and a container for animated lines
+  animatedH1.html(animationArray[0] + '<br><span class="container"></span>');
+  
+  
+  //loop through lines and add them as span.word -tags
+  for (var i = 1; i < animationArray.length; i++) { 
+      console.log(animationArray[i]); 
+      $("span.container").append("<span class='word'>" + animationArray[i] + "</span>");
+  }
+  
+  
+  ///Animation JS
+  //animoidaan
+  var words = document.getElementsByClassName('word');
+  var wordArray = [];
+  var currentWord = 0;
+  
+  words[currentWord].style.opacity = 1;
+  for (var i = 0; i < words.length; i++) {
+    splitLetters(words[i]);
+  }
+  
+  function changeWord() {
+    var cw = wordArray[currentWord];
+    var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+    for (var i = 0; i < cw.length; i++) {
+      animateLetterOut(cw, i);
+    }
+    
+    for (var i = 0; i < nw.length; i++) {
+      nw[i].className = 'letter behind';
+      nw[0].parentElement.style.opacity = 1;
+      animateLetterIn(nw, i);
+    }
+    
+    currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+  }
+  
+  function animateLetterOut(cw, i) {
+    setTimeout(function() {
+      cw[i].className = 'letter out';
+    }, i*45);
+  }
+  
+  function animateLetterIn(nw, i) {
+    setTimeout(function() {
+      nw[i].className = 'letter in';
+    }, 340+(i*45));
+  }
+  
+  function splitLetters(word) {
+    var content = word.innerHTML;
+    word.innerHTML = '';
+    var letters = [];
+    for (var i = 0; i < content.length; i++) {
+      var letter = document.createElement('span');
+      letter.className = 'letter';
+      letter.innerHTML = content.charAt(i);
+      word.appendChild(letter);
+      letters.push(letter);
+    }
+    
+    wordArray.push(letters);
+  }
+  
+  changeWord();
+  setInterval(changeWord, 3500);
+
+
+  }
+  else {
+    console.log("no christophe animated heading found");
+  }
+
+  
+}); 
