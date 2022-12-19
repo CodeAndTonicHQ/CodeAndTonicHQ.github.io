@@ -21,7 +21,7 @@ function purchaseButtonStripeCheck(href, text, url) {
 
 
 //STRIPE PAYMENT LINKS FOR ACUITY REDIRECTS
-purchaseButtonStripeCheck('https://buy.stripe.com/7sI7tl3uOakhbJKaFI', 'Buy via Stripe', 'acuity-scheduling-redirect');
+//purchaseButtonStripeCheck('https://buy.stripe.com/7sI7tl3uOakhbJKaFI', 'Buy via Stripe', 'acuity-scheduling-redirect');
 
 
 
