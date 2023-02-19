@@ -1,4 +1,4 @@
-// A list of currencies available on this site
+// GITHUB PASTE: A list of currencies available 
 const currencies = {
   USD: {
     code: "USD",
