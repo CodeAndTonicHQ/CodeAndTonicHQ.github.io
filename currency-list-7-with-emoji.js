@@ -1,7 +1,8 @@
-// GITHUB PASTE: A list of currencies available 
+//V7 A list of currencies available on this site
 const currencies = {
   USD: {
     code: "USD",
+    emojiFlag: "🇺🇸",
     symbol: "$",
     name: "US Dollar",
     symbolPosition: "before",
@@ -18,6 +19,7 @@ const currencies = {
   },
   CAD: {
     code: "CAD",
+    emojiFlag: "🇨🇦",
     symbol: "CA$",
     name: "Canadian Dollar",
     symbolPosition: "before",
@@ -34,6 +36,7 @@ const currencies = {
   },
   EUR: {
     code: "EUR",
+    emojiFlag: "🇪🇺",
     symbol: "€",
     name: "Euro",
     symbolPosition: "after",
@@ -50,6 +53,7 @@ const currencies = {
   },
   AED: {
     code: "AED",
+    emojiFlag: "🇦🇪",
     symbol: "AED",
     name: "United Arab Emirates Dirham",
     symbolPosition: "before",
@@ -66,6 +70,7 @@ const currencies = {
   },
   AFN: {
     code: "AFN",
+    emojiFlag: "🇦🇫",
     symbol: "Af",
     name: "Afghan Afghani",
     symbolPosition: "before",
@@ -82,6 +87,7 @@ const currencies = {
   },
   ALL: {
     code: "ALL",
+    emojiFlag: "🇦🇱",
     symbol: "ALL",
     name: "Albanian Lek",
     symbolPosition: "before",
@@ -98,6 +104,7 @@ const currencies = {
   },
   AMD: {
     code: "AMD",
+    emojiFlag: "🇦🇲",
     symbol: "AMD",
     name: "Armenian Dram",
     symbolPosition: "before",
@@ -114,6 +121,7 @@ const currencies = {
   },
   ARS: {
     code: "ARS",
+    emojiFlag: "🇦🇷",
     symbol: "AR$",
     name: "Argentine Peso",
     symbolPosition: "before",
@@ -130,6 +138,7 @@ const currencies = {
   },
   AUD: {
     code: "AUD",
+    emojiFlag: "🇦🇺",
     symbol: "AU$",
     name: "Australian Dollar",
     symbolPosition: "before",
@@ -146,6 +155,7 @@ const currencies = {
   },
   AZN: {
     code: "AZN",
+    emojiFlag: "🇦🇿",
     symbol: "man.",
     name: "Azerbaijani Manat",
     symbolPosition: "before",
@@ -162,6 +172,7 @@ const currencies = {
   },
   BAM: {
     code: "BAM",
+    emojiFlag: "🇧🇦",
     symbol: "KM",
     name: "Bosnia-Herzegovina Convertible Mark",
     symbolPosition: "before",
@@ -178,6 +189,7 @@ const currencies = {
   },
   BDT: {
     code: "BDT",
+    emojiFlag: "🇧🇩",
     symbol: "Tk",
     name: "Bangladeshi Taka",
     symbolPosition: "before",
@@ -194,6 +206,7 @@ const currencies = {
   },
   BGN: {
     code: "BGN",
+    emojiFlag: "🇧🇬",
     symbol: "BGN",
     name: "Bulgarian Lev",
     symbolPosition: "before",
@@ -210,6 +223,7 @@ const currencies = {
   },
   BHD: {
     code: "BHD",
+    emojiFlag: "🇧🇭",
     symbol: "BD",
     name: "Bahraini Dinar",
     symbolPosition: "before",
@@ -226,6 +240,7 @@ const currencies = {
   },
   BIF: {
     code: "BIF",
+    emojiFlag: "🇧🇮",
     symbol: "FBu",
     name: "Burundian Franc",
     symbolPosition: "before",
@@ -242,6 +257,7 @@ const currencies = {
   },
   BND: {
     code: "BND",
+    emojiFlag: "🇧🇳",
     symbol: "BN$",
     name: "Brunei Dollar",
     symbolPosition: "before",
@@ -258,6 +274,7 @@ const currencies = {
   },
   BOB: {
     code: "BOB",
+    emojiFlag: "🇧🇴",
     symbol: "Bs",
     name: "Bolivian Boliviano",
     symbolPosition: "before",
@@ -274,6 +291,7 @@ const currencies = {
   },
   BRL: {
     code: "BRL",
+    emojiFlag: "🇧🇷",
     symbol: "R$",
     name: "Brazilian Real",
     symbolPosition: "before",
@@ -290,6 +308,7 @@ const currencies = {
   },
   BWP: {
     code: "BWP",
+    emojiFlag: "🇧🇼",
     symbol: "BWP",
     name: "Botswanan Pula",
     symbolPosition: "before",
@@ -306,6 +325,7 @@ const currencies = {
   },
   BYN: {
     code: "BYN",
+    emojiFlag: "🇧🇾",
     symbol: "Br",
     name: "Belarusian Ruble",
     symbolPosition: "before",
@@ -322,6 +342,7 @@ const currencies = {
   },
   BZD: {
     code: "BZD",
+    emojiFlag: "🇧🇿",
     symbol: "BZ$",
     name: "Belize Dollar",
     symbolPosition: "before",
@@ -338,6 +359,7 @@ const currencies = {
   },
   CDF: {
     code: "CDF",
+    emojiFlag: "🇨🇩",
     symbol: "CDF",
     name: "Congolese Franc",
     symbolPosition: "before",
@@ -354,6 +376,7 @@ const currencies = {
   },
   CHF: {
     code: "CHF",
+    emojiFlag: "🇨🇭",
     symbol: "CHF",
     name: "Swiss Franc",
     symbolPosition: "before",
@@ -370,6 +393,7 @@ const currencies = {
   },
   CLP: {
     code: "CLP",
+    emojiFlag: "🇨🇱",
     symbol: "CL$",
     name: "Chilean Peso",
     symbolPosition: "before",
@@ -386,6 +410,7 @@ const currencies = {
   },
   CNY: {
     code: "CNY",
+    emojiFlag: "🇨🇳",
     symbol: "CN¥",
     name: "Chinese Yuan",
     symbolPosition: "before",
@@ -402,6 +427,7 @@ const currencies = {
   },
   COP: {
     code: "COP",
+    emojiFlag: "🇨🇴",
     symbol: "CO$",
     name: "Colombian Peso",
     symbolPosition: "before",
@@ -418,6 +444,7 @@ const currencies = {
   },
   CRC: {
     code: "CRC",
+    emojiFlag: "🇨🇷",
     symbol: "₡",
     name: "Costa Rican Colón",
     symbolPosition: "before",
@@ -434,6 +461,7 @@ const currencies = {
   },
   CVE: {
     code: "CVE",
+    emojiFlag: "🇨🇻",
     symbol: "CV$",
     name: "Cape Verdean Escudo",
     symbolPosition: "before",
@@ -450,6 +478,7 @@ const currencies = {
   },
   CZK: {
     code: "CZK",
+    emojiFlag: "🇨🇿",
     symbol: "Kč",
     name: "Czech Republic Koruna",
     symbolPosition: "before",
@@ -466,6 +495,7 @@ const currencies = {
   },
   DJF: {
     code: "DJF",
+    emojiFlag: "🇩🇯",
     symbol: "Fdj",
     name: "Djiboutian Franc",
     symbolPosition: "before",
@@ -482,6 +512,7 @@ const currencies = {
   },
   DKK: {
     code: "DKK",
+    emojiFlag: "🇩🇰",
     symbol: "kr",
     name: "Danish Krone",
     symbolPosition: "before",
@@ -498,6 +529,7 @@ const currencies = {
   },
   DOP: {
     code: "DOP",
+    emojiFlag: "🇩🇴",
     symbol: "RD$",
     name: "Dominican Peso",
     symbolPosition: "before",
@@ -514,6 +546,7 @@ const currencies = {
   },
   DZD: {
     code: "DZD",
+    emojiFlag: "🇩🇿",
     symbol: "DA",
     name: "Algerian Dinar",
     symbolPosition: "before",
@@ -530,6 +563,7 @@ const currencies = {
   },
   EGP: {
     code: "EGP",
+    emojiFlag: "🇪🇬",
     symbol: "EGP",
     name: "Egyptian Pound",
     symbolPosition: "before",
@@ -546,6 +580,7 @@ const currencies = {
   },
   ERN: {
     code: "ERN",
+    emojiFlag: "🇪🇷",
     symbol: "Nfk",
     name: "Eritrean Nakfa",
     symbolPosition: "before",
@@ -562,6 +597,7 @@ const currencies = {
   },
   ETB: {
     code: "ETB",
+    emojiFlag: "🇪🇹",
     symbol: "Br",
     name: "Ethiopian Birr",
     symbolPosition: "before",
@@ -578,6 +614,7 @@ const currencies = {
   },
   GBP: {
     code: "GBP",
+    emojiFlag: "🇬🇧",
     symbol: "£",
     name: "British Pound Sterling",
     symbolPosition: "before",
@@ -594,6 +631,7 @@ const currencies = {
   },
   GEL: {
     code: "GEL",
+    emojiFlag: "🇬🇪",
     symbol: "GEL",
     name: "Georgian Lari",
     symbolPosition: "before",
@@ -610,6 +648,7 @@ const currencies = {
   },
   GHS: {
     code: "GHS",
+    emojiFlag: "🇬🇭",
     symbol: "GH₵",
     name: "Ghanaian Cedi",
     symbolPosition: "before",
@@ -626,6 +665,7 @@ const currencies = {
   },
   GNF: {
     code: "GNF",
+    emojiFlag: "🇬🇳",
     symbol: "FG",
     name: "Guinean Franc",
     symbolPosition: "before",
@@ -642,6 +682,7 @@ const currencies = {
   },
   GTQ: {
     code: "GTQ",
+    emojiFlag: "🇬🇹",
     symbol: "GTQ",
     name: "Guatemalan Quetzal",
     symbolPosition: "before",
@@ -658,6 +699,7 @@ const currencies = {
   },
   HKD: {
     code: "HKD",
+    emojiFlag: "🇭🇰",
     symbol: "HK$",
     name: "Hong Kong Dollar",
     symbolPosition: "before",
@@ -674,6 +716,7 @@ const currencies = {
   },
   HNL: {
     code: "HNL",
+    emojiFlag: "🇭🇳",
     symbol: "HNL",
     name: "Honduran Lempira",
     symbolPosition: "before",
@@ -690,6 +733,7 @@ const currencies = {
   },
   HRK: {
     code: "HRK",
+    emojiFlag: "🇭🇷",
     symbol: "kn",
     name: "Croatian Kuna",
     symbolPosition: "before",
@@ -706,6 +750,7 @@ const currencies = {
   },
   HUF: {
     code: "HUF",
+    emojiFlag: "🇭🇺",
     symbol: "Ft",
     name: "Hungarian Forint",
     symbolPosition: "before",
@@ -722,6 +767,7 @@ const currencies = {
   },
   IDR: {
     code: "IDR",
+    emojiFlag: "🇮🇩",
     symbol: "Rp",
     name: "Indonesian Rupiah",
     symbolPosition: "before",
@@ -738,6 +784,7 @@ const currencies = {
   },
   ILS: {
     code: "ILS",
+    emojiFlag: "🇮🇱",
     symbol: "₪",
     name: "Israeli New Sheqel",
     symbolPosition: "before",
@@ -754,6 +801,7 @@ const currencies = {
   },
   INR: {
     code: "INR",
+    emojiFlag: "🇮🇳",
     symbol: "Rs",
     name: "Indian Rupee",
     symbolPosition: "before",
@@ -770,6 +818,7 @@ const currencies = {
   },
   IQD: {
     code: "IQD",
+    emojiFlag: "🇮🇶",
     symbol: "IQD",
     name: "Iraqi Dinar",
     symbolPosition: "before",
@@ -786,6 +835,7 @@ const currencies = {
   },
   IRR: {
     code: "IRR",
+    emojiFlag: "🇮🇷",
     symbol: "IRR",
     name: "Iranian Rial",
     symbolPosition: "before",
@@ -802,6 +852,7 @@ const currencies = {
   },
   ISK: {
     code: "ISK",
+    emojiFlag: "🇮🇸",
     symbol: "Ikr",
     name: "Icelandic Króna",
     symbolPosition: "before",
@@ -818,6 +869,7 @@ const currencies = {
   },
   JMD: {
     code: "JMD",
+    emojiFlag: "🇯🇲",
     symbol: "J$",
     name: "Jamaican Dollar",
     symbolPosition: "before",
@@ -834,6 +886,7 @@ const currencies = {
   },
   JOD: {
     code: "JOD",
+    emojiFlag: "🇯🇴",
     symbol: "JD",
     name: "Jordanian Dinar",
     symbolPosition: "before",
@@ -850,6 +903,7 @@ const currencies = {
   },
   JPY: {
     code: "JPY",
+    emojiFlag: "🇯🇵",
     symbol: "¥",
     name: "Japanese Yen",
     symbolPosition: "before",
@@ -866,6 +920,7 @@ const currencies = {
   },
   KES: {
     code: "KES",
+    emojiFlag: "🇰🇪",
     symbol: "Ksh",
     name: "Kenyan Shilling",
     symbolPosition: "before",
@@ -882,6 +937,7 @@ const currencies = {
   },
   KHR: {
     code: "KHR",
+    emojiFlag: "🇰🇭",
     symbol: "KHR",
     name: "Cambodian Riel",
     symbolPosition: "before",
@@ -898,6 +954,7 @@ const currencies = {
   },
   KMF: {
     code: "KMF",
+    emojiFlag: "🇰🇲",
     symbol: "CF",
     name: "Comorian Franc",
     symbolPosition: "before",
@@ -914,6 +971,7 @@ const currencies = {
   },
   KRW: {
     code: "KRW",
+    emojiFlag: "🇰🇷",
     symbol: "₩",
     name: "South Korean Won",
     symbolPosition: "before",
@@ -930,6 +988,7 @@ const currencies = {
   },
   KWD: {
     code: "KWD",
+    emojiFlag: "🇰🇼",
     symbol: "KD",
     name: "Kuwaiti Dinar",
     symbolPosition: "before",
@@ -946,6 +1005,7 @@ const currencies = {
   },
   KZT: {
     code: "KZT",
+    emojiFlag: "🇰🇿",
     symbol: "KZT",
     name: "Kazakhstani Tenge",
     symbolPosition: "before",
@@ -962,6 +1022,7 @@ const currencies = {
   },
   LBP: {
     code: "LBP",
+    emojiFlag: "🇱🇧",
     symbol: "LB£",
     name: "Lebanese Pound",
     symbolPosition: "before",
@@ -978,6 +1039,7 @@ const currencies = {
   },
   LKR: {
     code: "LKR",
+    emojiFlag: "🇱🇰",
     symbol: "SLRs",
     name: "Sri Lankan Rupee",
     symbolPosition: "before",
@@ -994,6 +1056,7 @@ const currencies = {
   },
   LYD: {
     code: "LYD",
+    emojiFlag: "🇱🇾",
     symbol: "LD",
     name: "Libyan Dinar",
     symbolPosition: "before",
@@ -1010,6 +1073,7 @@ const currencies = {
   },
   MAD: {
     code: "MAD",
+    emojiFlag: "🇲🇦",
     symbol: "MAD",
     name: "Moroccan Dirham",
     symbolPosition: "before",
@@ -1026,6 +1090,7 @@ const currencies = {
   },
   MDL: {
     code: "MDL",
+    emojiFlag: "🇲🇩",
     symbol: "MDL",
     name: "Moldovan Leu",
     symbolPosition: "before",
@@ -1042,6 +1107,7 @@ const currencies = {
   },
   MGA: {
     code: "MGA",
+    emojiFlag: "🇲🇬",
     symbol: "MGA",
     name: "Malagasy Ariary",
     symbolPosition: "before",
@@ -1058,6 +1124,7 @@ const currencies = {
   },
   MKD: {
     code: "MKD",
+    emojiFlag: "🇲🇰",
     symbol: "MKD",
     name: "Macedonian Denar",
     symbolPosition: "before",
@@ -1074,6 +1141,7 @@ const currencies = {
   },
   MMK: {
     code: "MMK",
+    emojiFlag: "🇲🇲",
     symbol: "MMK",
     name: "Myanma Kyat",
     symbolPosition: "before",
@@ -1090,6 +1158,7 @@ const currencies = {
   },
   MOP: {
     code: "MOP",
+    emojiFlag: "🇲🇴",
     symbol: "MOP$",
     name: "Macanese Pataca",
     symbolPosition: "before",
@@ -1106,6 +1175,7 @@ const currencies = {
   },
   MUR: {
     code: "MUR",
+    emojiFlag: "🇲🇺",
     symbol: "MURs",
     name: "Mauritian Rupee",
     symbolPosition: "before",
@@ -1122,6 +1192,7 @@ const currencies = {
   },
   MXN: {
     code: "MXN",
+    emojiFlag: "🇲🇽",
     symbol: "MX$",
     name: "Mexican Peso",
     symbolPosition: "before",
@@ -1138,6 +1209,7 @@ const currencies = {
   },
   MYR: {
     code: "MYR",
+    emojiFlag: "🇲🇾",
     symbol: "RM",
     name: "Malaysian Ringgit",
     symbolPosition: "before",
@@ -1154,6 +1226,7 @@ const currencies = {
   },
   MZN: {
     code: "MZN",
+    emojiFlag: "🇲🇿",
     symbol: "MTn",
     name: "Mozambican Metical",
     symbolPosition: "before",
@@ -1170,6 +1243,7 @@ const currencies = {
   },
   NAD: {
     code: "NAD",
+    emojiFlag: "🇳🇦",
     symbol: "N$",
     name: "Namibian Dollar",
     symbolPosition: "before",
@@ -1186,6 +1260,7 @@ const currencies = {
   },
   NGN: {
     code: "NGN",
+    emojiFlag: "🇳🇬",
     symbol: "₦",
     name: "Nigerian Naira",
     symbolPosition: "before",
@@ -1202,6 +1277,7 @@ const currencies = {
   },
   NIO: {
     code: "NIO",
+    emojiFlag: "🇳🇮",
     symbol: "C$",
     name: "Nicaraguan Córdoba",
     symbolPosition: "before",
@@ -1234,6 +1310,7 @@ const currencies = {
   },
   NPR: {
     code: "NPR",
+    emojiFlag: "🇳🇵",
     symbol: "NPRs",
     name: "Nepalese Rupee",
     symbolPosition: "before",
@@ -1266,6 +1343,7 @@ const currencies = {
   },
   OMR: {
     code: "OMR",
+    emojiFlag: "🇴🇲",
     symbol: "OMR",
     name: "Omani Rial",
     symbolPosition: "before",
@@ -1298,6 +1376,7 @@ const currencies = {
   },
   PEN: {
     code: "PEN",
+    emojiFlag: "🇵🇪",
     symbol: "S/.",
     name: "Peruvian Nuevo Sol",
     symbolPosition: "before",
@@ -1330,6 +1409,7 @@ const currencies = {
   },
   PKR: {
     code: "PKR",
+    emojiFlag: "🇵🇰",
     symbol: "PKRs",
     name: "Pakistani Rupee",
     symbolPosition: "before",
@@ -1346,6 +1426,7 @@ const currencies = {
   },
   PLN: {
     code: "PLN",
+    emojiFlag: "🇵🇱",
     symbol: "zł",
     name: "Polish Zloty",
     symbolPosition: "after",
@@ -1362,6 +1443,7 @@ const currencies = {
   },
   PYG: {
     code: "PYG",
+    emojiFlag: "🇵🇾",
     symbol: "₲",
     name: "Paraguayan Guarani",
     symbolPosition: "before",
@@ -1378,6 +1460,7 @@ const currencies = {
   },
   QAR: {
     code: "QAR",
+    emojiFlag: "🇶🇦",
     symbol: "QR",
     name: "Qatari Rial",
     symbolPosition: "before",
@@ -1394,6 +1477,7 @@ const currencies = {
   },
   RON: {
     code: "RON",
+    emojiFlag: "🇷🇴",
     symbol: "RON",
     name: "Romanian Leu",
     symbolPosition: "before",
@@ -1410,6 +1494,7 @@ const currencies = {
   },
   RSD: {
     code: "RSD",
+    emojiFlag: "🇷🇸",
     symbol: "din.",
     name: "Serbian Dinar",
     symbolPosition: "before",
@@ -1426,6 +1511,7 @@ const currencies = {
   },
   RUB: {
     code: "RUB",
+    emojiFlag: "🇷🇺",
     symbol: "RUB",
     name: "Russian Ruble",
     symbolPosition: "after",
@@ -1442,6 +1528,7 @@ const currencies = {
   },
   RWF: {
     code: "RWF",
+    emojiFlag: "🇷🇼",
     symbol: "RWF",
     name: "Rwandan Franc",
     symbolPosition: "before",
@@ -1458,6 +1545,7 @@ const currencies = {
   },
   SAR: {
     code: "SAR",
+    emojiFlag: "🇸🇦",
     symbol: "SR",
     name: "Saudi Riyal",
     symbolPosition: "after",
@@ -1474,6 +1562,7 @@ const currencies = {
   },
   SDG: {
     code: "SDG",
+    emojiFlag: "🇸🇩",
     symbol: "SDG",
     name: "Sudanese Pound",
     symbolPosition: "before",
@@ -1490,6 +1579,7 @@ const currencies = {
   },
   SEK: {
     code: "SEK",
+    emojiFlag: "🇸🇪",
     symbol: "kr",
     name: "Swedish Krona",
     symbolPosition: "after",
@@ -1506,6 +1596,7 @@ const currencies = {
   },
   SGD: {
     code: "SGD",
+    emojiFlag: "🇸🇬",
     symbol: "S$",
     name: "Singapore Dollar",
     symbolPosition: "before",
@@ -1522,6 +1613,7 @@ const currencies = {
   },
   SOS: {
     code: "SOS",
+    emojiFlag: "🇸🇴",
     symbol: "Ssh",
     name: "Somali Shilling",
     symbolPosition: "before",
@@ -1538,6 +1630,7 @@ const currencies = {
   },
   SYP: {
     code: "SYP",
+    emojiFlag: "🇸🇾",
     symbol: "SY£",
     name: "Syrian Pound",
     symbolPosition: "before",
@@ -1554,6 +1647,7 @@ const currencies = {
   },
   THB: {
     code: "THB",
+    emojiFlag: "🇹🇭",
     symbol: "฿",
     name: "Thai Baht",
     symbolPosition: "after",
@@ -1570,6 +1664,7 @@ const currencies = {
   },
   TND: {
     code: "TND",
+    emojiFlag: "🇹🇳",
     symbol: "DT",
     name: "Tunisian Dinar",
     symbolPosition: "before",
@@ -1586,6 +1681,7 @@ const currencies = {
   },
   TOP: {
     code: "TOP",
+    emojiFlag: "🇹🇴",
     symbol: "T$",
     name: "Tongan Paʻanga",
     symbolPosition: "before",
@@ -1602,6 +1698,7 @@ const currencies = {
   },
   TRY: {
     code: "TRY",
+    emojiFlag: "🇹🇷",
     symbol: "TL",
     name: "Turkish Lira",
     symbolPosition: "after",
@@ -1618,6 +1715,7 @@ const currencies = {
   },
   TTD: {
     code: "TTD",
+    emojiFlag: "🇹🇹",
     symbol: "TT$",
     name: "Trinidad and Tobago Dollar",
     symbolPosition: "before",
@@ -1634,6 +1732,7 @@ const currencies = {
   },
   TWD: {
     code: "TWD",
+    emojiFlag: "🇹🇼",
     symbol: "NT$",
     name: "New Taiwan Dollar",
     symbolPosition: "before",
@@ -1650,6 +1749,7 @@ const currencies = {
   },
   TZS: {
     code: "TZS",
+    emojiFlag: "🇹🇿",
     symbol: "TSh",
     name: "Tanzanian Shilling",
     symbolPosition: "before",
@@ -1666,6 +1766,7 @@ const currencies = {
   },
   UAH: {
     code: "UAH",
+    emojiFlag: "🇺🇦",
     symbol: "₴",
     name: "Ukrainian Hryvnia",
     symbolPosition: "before",
@@ -1682,6 +1783,7 @@ const currencies = {
   },
   UGX: {
     code: "UGX",
+    emojiFlag: "🇺🇬",
     symbol: "USh",
     name: "Ugandan Shilling",
     symbolPosition: "before",
@@ -1698,6 +1800,7 @@ const currencies = {
   },
   UYU: {
     code: "UYU",
+    emojiFlag: "🇺🇾",
     symbol: "$U",
     name: "Uruguayan Peso",
     symbolPosition: "before",
@@ -1714,6 +1817,7 @@ const currencies = {
   },
   UZS: {
     code: "UZS",
+    emojiFlag: "🇺🇿",
     symbol: "UZS",
     name: "Uzbekistan Som",
     symbolPosition: "before",
@@ -1730,6 +1834,7 @@ const currencies = {
   },
   VEF: {
     code: "VES",
+    emojiFlag: "🇻🇪",
     symbol: "Bs.F.",
     name: "Venezuelan Bolívar",
     symbolPosition: "before",
@@ -1746,6 +1851,7 @@ const currencies = {
   },
   VND: {
     code: "VND",
+    emojiFlag: "🇻🇳",
     symbol: "₫",
     name: "Vietnamese Dong",
     symbolPosition: "after",
@@ -1762,6 +1868,7 @@ const currencies = {
   },
   XAF: {
     code: "XAF",
+    emojiFlag: "",
     symbol: "FCFA",
     name: "CFA Franc BEAC",
     symbolPosition: "before",
@@ -1778,6 +1885,7 @@ const currencies = {
   },
   XOF: {
     code: "XOF",
+    emojiFlag: "",
     symbol: "CFA",
     name: "CFA Franc BCEAO",
     symbolPosition: "before",
@@ -1794,6 +1902,7 @@ const currencies = {
   },
   YER: {
     code: "YER",
+    emojiFlag: "🇾🇪",
     symbol: "YR",
     name: "Yemeni Rial",
     symbolPosition: "before",
@@ -1810,6 +1919,7 @@ const currencies = {
   },
   ZAR: {
     code: "ZAR",
+    emojiFlag: "🇿🇦",
     symbol: "R",
     name: "South African Rand",
     symbolPosition: "before",
@@ -1826,6 +1936,7 @@ const currencies = {
   },
   ZMK: {
     code: "ZMW",
+    emojiFlag: "🇿🇲",
     symbol: "ZK",
     name: "Zambian Kwacha",
     symbolPosition: "before",
@@ -1841,3 +1952,5 @@ const currencies = {
     "symbolNative": "ZK",
   }
 }
+
+
