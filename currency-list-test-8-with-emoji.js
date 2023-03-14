@@ -1,15 +1,20 @@
-//V7 A list of currencies available on this site
+
+// 14.3.2023 updated formats, aud, NZD, symbol before price
+
+
+
+//symbol = dropdown format. formatOptions.symbol = price format
 const currencies = {
   USD: {
     code: "USD",
     emojiFlag: "🇺🇸",
     symbol: "$",
     name: "US Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
-      symbol: "$",
-      pattern: "# !",
+      symbol: "US$",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -20,13 +25,13 @@ const currencies = {
   CAD: {
     code: "CAD",
     emojiFlag: "🇨🇦",
-    symbol: "CA$",
+    symbol: "$",
     name: "Canadian Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
-      symbol: "$",
-      pattern: "# !",
+      symbol: "CA$",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -39,11 +44,11 @@ const currencies = {
     emojiFlag: "🇪🇺",
     symbol: "€",
     name: "Euro",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: true,
     formatOptions: {
       symbol: "€",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -54,13 +59,13 @@ const currencies = {
   AED: {
     code: "AED",
     emojiFlag: "🇦🇪",
-    symbol: "AED",
+    symbol: "د",
     name: "United Arab Emirates Dirham",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
-      symbol: "د",
-      pattern: "# !",
+      symbol: "AED",
+      pattern: "! #",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -73,11 +78,11 @@ const currencies = {
     emojiFlag: "🇦🇫",
     symbol: "Af",
     name: "Afghan Afghani",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "؋",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -90,11 +95,11 @@ const currencies = {
     emojiFlag: "🇦🇱",
     symbol: "ALL",
     name: "Albanian Lek",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "L",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -107,11 +112,11 @@ const currencies = {
     emojiFlag: "🇦🇲",
     symbol: "AMD",
     name: "Armenian Dram",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "դ",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -124,11 +129,11 @@ const currencies = {
     emojiFlag: "🇦🇷",
     symbol: "AR$",
     name: "Argentine Peso",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -141,11 +146,11 @@ const currencies = {
     emojiFlag: "🇦🇺",
     symbol: "AU$",
     name: "Australian Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
-      symbol: "$",
-      pattern: "# !",
+      symbol: "AU$",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -158,11 +163,11 @@ const currencies = {
     emojiFlag: "🇦🇿",
     symbol: "man.",
     name: "Azerbaijani Manat",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "м",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -175,11 +180,11 @@ const currencies = {
     emojiFlag: "🇧🇦",
     symbol: "KM",
     name: "Bosnia-Herzegovina Convertible Mark",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "K",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -192,11 +197,11 @@ const currencies = {
     emojiFlag: "🇧🇩",
     symbol: "Tk",
     name: "Bangladeshi Taka",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "৳",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -209,11 +214,11 @@ const currencies = {
     emojiFlag: "🇧🇬",
     symbol: "BGN",
     name: "Bulgarian Lev",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "л",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -226,11 +231,11 @@ const currencies = {
     emojiFlag: "🇧🇭",
     symbol: "BD",
     name: "Bahraini Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 3,
@@ -243,11 +248,11 @@ const currencies = {
     emojiFlag: "🇧🇮",
     symbol: "FBu",
     name: "Burundian Franc",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -260,11 +265,11 @@ const currencies = {
     emojiFlag: "🇧🇳",
     symbol: "BN$",
     name: "Brunei Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -277,11 +282,11 @@ const currencies = {
     emojiFlag: "🇧🇴",
     symbol: "Bs",
     name: "Bolivian Boliviano",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "B",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -294,11 +299,11 @@ const currencies = {
     emojiFlag: "🇧🇷",
     symbol: "R$",
     name: "Brazilian Real",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "R",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -311,11 +316,11 @@ const currencies = {
     emojiFlag: "🇧🇼",
     symbol: "BWP",
     name: "Botswanan Pula",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "P",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -328,11 +333,11 @@ const currencies = {
     emojiFlag: "🇧🇾",
     symbol: "Br",
     name: "Belarusian Ruble",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "р",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -345,11 +350,11 @@ const currencies = {
     emojiFlag: "🇧🇿",
     symbol: "BZ$",
     name: "Belize Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -362,11 +367,11 @@ const currencies = {
     emojiFlag: "🇨🇩",
     symbol: "CDF",
     name: "Congolese Franc",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -379,11 +384,11 @@ const currencies = {
     emojiFlag: "🇨🇭",
     symbol: "CHF",
     name: "Swiss Franc",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "C",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -396,11 +401,11 @@ const currencies = {
     emojiFlag: "🇨🇱",
     symbol: "CL$",
     name: "Chilean Peso",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -413,11 +418,11 @@ const currencies = {
     emojiFlag: "🇨🇳",
     symbol: "CN¥",
     name: "Chinese Yuan",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "C",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -430,11 +435,11 @@ const currencies = {
     emojiFlag: "🇨🇴",
     symbol: "CO$",
     name: "Colombian Peso",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -447,11 +452,11 @@ const currencies = {
     emojiFlag: "🇨🇷",
     symbol: "₡",
     name: "Costa Rican Colón",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₡",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -464,11 +469,11 @@ const currencies = {
     emojiFlag: "🇨🇻",
     symbol: "CV$",
     name: "Cape Verdean Escudo",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "C",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -481,11 +486,11 @@ const currencies = {
     emojiFlag: "🇨🇿",
     symbol: "Kč",
     name: "Czech Republic Koruna",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "K",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -498,11 +503,11 @@ const currencies = {
     emojiFlag: "🇩🇯",
     symbol: "Fdj",
     name: "Djiboutian Franc",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -515,11 +520,12 @@ const currencies = {
     emojiFlag: "🇩🇰",
     symbol: "kr",
     name: "Danish Krone",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
-      symbol: "k",
+      symbol: "kr", 
       pattern: "# !",
+      //symbol + pattenr ok. checked from https://www.zalando.dk/herrer-home/
       precision: 2,
     },
     "decimalDigits": 2,
@@ -532,11 +538,11 @@ const currencies = {
     emojiFlag: "🇩🇴",
     symbol: "RD$",
     name: "Dominican Peso",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "R",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -549,11 +555,11 @@ const currencies = {
     emojiFlag: "🇩🇿",
     symbol: "DA",
     name: "Algerian Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -566,11 +572,11 @@ const currencies = {
     emojiFlag: "🇪🇬",
     symbol: "EGP",
     name: "Egyptian Pound",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ج",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -583,11 +589,11 @@ const currencies = {
     emojiFlag: "🇪🇷",
     symbol: "Nfk",
     name: "Eritrean Nakfa",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "N",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -600,11 +606,11 @@ const currencies = {
     emojiFlag: "🇪🇹",
     symbol: "Br",
     name: "Ethiopian Birr",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "B",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -617,11 +623,11 @@ const currencies = {
     emojiFlag: "🇬🇧",
     symbol: "£",
     name: "British Pound Sterling",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "£",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -634,11 +640,11 @@ const currencies = {
     emojiFlag: "🇬🇪",
     symbol: "GEL",
     name: "Georgian Lari",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "G",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -651,11 +657,11 @@ const currencies = {
     emojiFlag: "🇬🇭",
     symbol: "GH₵",
     name: "Ghanaian Cedi",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "G",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -668,11 +674,11 @@ const currencies = {
     emojiFlag: "🇬🇳",
     symbol: "FG",
     name: "Guinean Franc",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -685,11 +691,11 @@ const currencies = {
     emojiFlag: "🇬🇹",
     symbol: "GTQ",
     name: "Guatemalan Quetzal",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "Q",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -702,11 +708,11 @@ const currencies = {
     emojiFlag: "🇭🇰",
     symbol: "HK$",
     name: "Hong Kong Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -719,11 +725,11 @@ const currencies = {
     emojiFlag: "🇭🇳",
     symbol: "HNL",
     name: "Honduran Lempira",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "L",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -736,11 +742,11 @@ const currencies = {
     emojiFlag: "🇭🇷",
     symbol: "kn",
     name: "Croatian Kuna",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "k",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -753,11 +759,11 @@ const currencies = {
     emojiFlag: "🇭🇺",
     symbol: "Ft",
     name: "Hungarian Forint",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -770,11 +776,11 @@ const currencies = {
     emojiFlag: "🇮🇩",
     symbol: "Rp",
     name: "Indonesian Rupiah",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "R",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -787,11 +793,11 @@ const currencies = {
     emojiFlag: "🇮🇱",
     symbol: "₪",
     name: "Israeli New Sheqel",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₪",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -804,11 +810,11 @@ const currencies = {
     emojiFlag: "🇮🇳",
     symbol: "Rs",
     name: "Indian Rupee",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ট",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -821,11 +827,11 @@ const currencies = {
     emojiFlag: "🇮🇶",
     symbol: "IQD",
     name: "Iraqi Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -838,11 +844,11 @@ const currencies = {
     emojiFlag: "🇮🇷",
     symbol: "IRR",
     name: "Iranian Rial",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "﷼",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -855,11 +861,11 @@ const currencies = {
     emojiFlag: "🇮🇸",
     symbol: "Ikr",
     name: "Icelandic Króna",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "k",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -872,11 +878,11 @@ const currencies = {
     emojiFlag: "🇯🇲",
     symbol: "J$",
     name: "Jamaican Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -889,11 +895,11 @@ const currencies = {
     emojiFlag: "🇯🇴",
     symbol: "JD",
     name: "Jordanian Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 3,
@@ -906,11 +912,11 @@ const currencies = {
     emojiFlag: "🇯🇵",
     symbol: "¥",
     name: "Japanese Yen",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "￥",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -923,11 +929,11 @@ const currencies = {
     emojiFlag: "🇰🇪",
     symbol: "Ksh",
     name: "Kenyan Shilling",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "K",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -940,11 +946,11 @@ const currencies = {
     emojiFlag: "🇰🇭",
     symbol: "KHR",
     name: "Cambodian Riel",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "៛",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -957,11 +963,11 @@ const currencies = {
     emojiFlag: "🇰🇲",
     symbol: "CF",
     name: "Comorian Franc",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -974,11 +980,11 @@ const currencies = {
     emojiFlag: "🇰🇷",
     symbol: "₩",
     name: "South Korean Won",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₩",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -991,11 +997,11 @@ const currencies = {
     emojiFlag: "🇰🇼",
     symbol: "KD",
     name: "Kuwaiti Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 3,
@@ -1008,11 +1014,11 @@ const currencies = {
     emojiFlag: "🇰🇿",
     symbol: "KZT",
     name: "Kazakhstani Tenge",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "т",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1025,11 +1031,11 @@ const currencies = {
     emojiFlag: "🇱🇧",
     symbol: "LB£",
     name: "Lebanese Pound",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ل",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1042,11 +1048,11 @@ const currencies = {
     emojiFlag: "🇱🇰",
     symbol: "SLRs",
     name: "Sri Lankan Rupee",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "S",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1059,11 +1065,11 @@ const currencies = {
     emojiFlag: "🇱🇾",
     symbol: "LD",
     name: "Libyan Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 3,
@@ -1076,11 +1082,11 @@ const currencies = {
     emojiFlag: "🇲🇦",
     symbol: "MAD",
     name: "Moroccan Dirham",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1093,11 +1099,11 @@ const currencies = {
     emojiFlag: "🇲🇩",
     symbol: "MDL",
     name: "Moldovan Leu",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "M",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1110,11 +1116,11 @@ const currencies = {
     emojiFlag: "🇲🇬",
     symbol: "MGA",
     name: "Malagasy Ariary",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "M",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1127,11 +1133,11 @@ const currencies = {
     emojiFlag: "🇲🇰",
     symbol: "MKD",
     name: "Macedonian Denar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "M",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1144,11 +1150,11 @@ const currencies = {
     emojiFlag: "🇲🇲",
     symbol: "MMK",
     name: "Myanma Kyat",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "K",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1161,11 +1167,11 @@ const currencies = {
     emojiFlag: "🇲🇴",
     symbol: "MOP$",
     name: "Macanese Pataca",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "M",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1178,11 +1184,11 @@ const currencies = {
     emojiFlag: "🇲🇺",
     symbol: "MURs",
     name: "Mauritian Rupee",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "M",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1195,11 +1201,11 @@ const currencies = {
     emojiFlag: "🇲🇽",
     symbol: "MX$",
     name: "Mexican Peso",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1212,11 +1218,11 @@ const currencies = {
     emojiFlag: "🇲🇾",
     symbol: "RM",
     name: "Malaysian Ringgit",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "R",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1229,11 +1235,11 @@ const currencies = {
     emojiFlag: "🇲🇿",
     symbol: "MTn",
     name: "Mozambican Metical",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "M",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1246,11 +1252,11 @@ const currencies = {
     emojiFlag: "🇳🇦",
     symbol: "N$",
     name: "Namibian Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "N",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1263,11 +1269,11 @@ const currencies = {
     emojiFlag: "🇳🇬",
     symbol: "₦",
     name: "Nigerian Naira",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₦",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1280,11 +1286,11 @@ const currencies = {
     emojiFlag: "🇳🇮",
     symbol: "C$",
     name: "Nicaraguan Córdoba",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "C",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1294,12 +1300,12 @@ const currencies = {
   },
   NOK: {
     code: "NOK",
-    symbol: "Nkr",
+    symbol: "kr.",
     name: "Norwegian Krone",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
-      symbol: "k",
+      symbol: "kr.", //ok 
       pattern: "# !",
       precision: 2,
     },
@@ -1313,11 +1319,11 @@ const currencies = {
     emojiFlag: "🇳🇵",
     symbol: "NPRs",
     name: "Nepalese Rupee",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ने",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1327,13 +1333,13 @@ const currencies = {
   },
   NZD: {
     code: "NZD",
-    symbol: "NZ$",
+    symbol: "$",
     name: "New Zealand Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
-    formatOptions: {
-      symbol: "$",
-      pattern: "# !",
+    formatOptions: { 
+      symbol: "NZ$",//ok from https://www.mightyape.co.nz/
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1346,11 +1352,11 @@ const currencies = {
     emojiFlag: "🇴🇲",
     symbol: "OMR",
     name: "Omani Rial",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ر",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 3,
@@ -1362,11 +1368,11 @@ const currencies = {
     code: "PAB",
     symbol: "B/.",
     name: "Panamanian Balboa",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "B",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1379,11 +1385,11 @@ const currencies = {
     emojiFlag: "🇵🇪",
     symbol: "S/.",
     name: "Peruvian Nuevo Sol",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "S",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1395,11 +1401,11 @@ const currencies = {
     code: "PHP",
     symbol: "₱",
     name: "Philippine Peso",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₱",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1412,11 +1418,11 @@ const currencies = {
     emojiFlag: "🇵🇰",
     symbol: "PKRs",
     name: "Pakistani Rupee",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₨",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1429,11 +1435,11 @@ const currencies = {
     emojiFlag: "🇵🇱",
     symbol: "zł",
     name: "Polish Zloty",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "z",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1446,11 +1452,11 @@ const currencies = {
     emojiFlag: "🇵🇾",
     symbol: "₲",
     name: "Paraguayan Guarani",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₲",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1463,11 +1469,11 @@ const currencies = {
     emojiFlag: "🇶🇦",
     symbol: "QR",
     name: "Qatari Rial",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ر",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1480,11 +1486,11 @@ const currencies = {
     emojiFlag: "🇷🇴",
     symbol: "RON",
     name: "Romanian Leu",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "R",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1497,11 +1503,11 @@ const currencies = {
     emojiFlag: "🇷🇸",
     symbol: "din.",
     name: "Serbian Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "д",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1514,11 +1520,11 @@ const currencies = {
     emojiFlag: "🇷🇺",
     symbol: "RUB",
     name: "Russian Ruble",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₽",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1531,11 +1537,11 @@ const currencies = {
     emojiFlag: "🇷🇼",
     symbol: "RWF",
     name: "Rwandan Franc",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1548,11 +1554,11 @@ const currencies = {
     emojiFlag: "🇸🇦",
     symbol: "SR",
     name: "Saudi Riyal",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ر",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1565,11 +1571,11 @@ const currencies = {
     emojiFlag: "🇸🇩",
     symbol: "SDG",
     name: "Sudanese Pound",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "S",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1580,12 +1586,12 @@ const currencies = {
   SEK: {
     code: "SEK",
     emojiFlag: "🇸🇪",
-    symbol: "kr",
+    symbol: "kr.",
     name: "Swedish Krona",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: false,
     formatOptions: {
-      symbol: "kr",
+      symbol: "kr.",
       pattern: "# !",
       precision: 2,
     },
@@ -1599,11 +1605,11 @@ const currencies = {
     emojiFlag: "🇸🇬",
     symbol: "S$",
     name: "Singapore Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1616,11 +1622,11 @@ const currencies = {
     emojiFlag: "🇸🇴",
     symbol: "Ssh",
     name: "Somali Shilling",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "S",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1633,11 +1639,11 @@ const currencies = {
     emojiFlag: "🇸🇾",
     symbol: "SY£",
     name: "Syrian Pound",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ل",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1650,11 +1656,11 @@ const currencies = {
     emojiFlag: "🇹🇭",
     symbol: "฿",
     name: "Thai Baht",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "฿",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1667,11 +1673,11 @@ const currencies = {
     emojiFlag: "🇹🇳",
     symbol: "DT",
     name: "Tunisian Dinar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "د",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 3,
@@ -1684,11 +1690,11 @@ const currencies = {
     emojiFlag: "🇹🇴",
     symbol: "T$",
     name: "Tongan Paʻanga",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "T",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1701,11 +1707,11 @@ const currencies = {
     emojiFlag: "🇹🇷",
     symbol: "TL",
     name: "Turkish Lira",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "T",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1718,11 +1724,11 @@ const currencies = {
     emojiFlag: "🇹🇹",
     symbol: "TT$",
     name: "Trinidad and Tobago Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1735,11 +1741,11 @@ const currencies = {
     emojiFlag: "🇹🇼",
     symbol: "NT$",
     name: "New Taiwan Dollar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "N",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1752,11 +1758,11 @@ const currencies = {
     emojiFlag: "🇹🇿",
     symbol: "TSh",
     name: "Tanzanian Shilling",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "T",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1769,11 +1775,11 @@ const currencies = {
     emojiFlag: "🇺🇦",
     symbol: "₴",
     name: "Ukrainian Hryvnia",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₴",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1786,11 +1792,11 @@ const currencies = {
     emojiFlag: "🇺🇬",
     symbol: "USh",
     name: "Ugandan Shilling",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "U",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1803,11 +1809,11 @@ const currencies = {
     emojiFlag: "🇺🇾",
     symbol: "$U",
     name: "Uruguayan Peso",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "$",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1820,11 +1826,11 @@ const currencies = {
     emojiFlag: "🇺🇿",
     symbol: "UZS",
     name: "Uzbekistan Som",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "U",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1837,11 +1843,11 @@ const currencies = {
     emojiFlag: "🇻🇪",
     symbol: "Bs.F.",
     name: "Venezuelan Bolívar",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "B",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1854,11 +1860,11 @@ const currencies = {
     emojiFlag: "🇻🇳",
     symbol: "₫",
     name: "Vietnamese Dong",
-    symbolPosition: "after",
+    symbolPosition: "after", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "₫",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1871,11 +1877,11 @@ const currencies = {
     emojiFlag: "",
     symbol: "FCFA",
     name: "CFA Franc BEAC",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "F",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1888,11 +1894,11 @@ const currencies = {
     emojiFlag: "",
     symbol: "CFA",
     name: "CFA Franc BCEAO",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "C",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1905,11 +1911,11 @@ const currencies = {
     emojiFlag: "🇾🇪",
     symbol: "YR",
     name: "Yemeni Rial",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "ر",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
@@ -1922,11 +1928,11 @@ const currencies = {
     emojiFlag: "🇿🇦",
     symbol: "R",
     name: "South African Rand",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "R",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 2,
@@ -1939,11 +1945,11 @@ const currencies = {
     emojiFlag: "🇿🇲",
     symbol: "ZK",
     name: "Zambian Kwacha",
-    symbolPosition: "before",
+    symbolPosition: "before", //not used. we use pattern
     default: false,
     formatOptions: {
       symbol: "Z",
-      pattern: "# !",
+      pattern: "!#",
       precision: 2,
     },
     "decimalDigits": 0,
