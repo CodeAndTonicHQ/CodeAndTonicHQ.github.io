@@ -1,18 +1,17 @@
-  
   //Debugger function that console logs the data if acuityDebug = true
   function acuityDebugConsoleLog(what){
-    if(acuityDebug){
+    if(acuityDebug ){
       console.log(what);
     }
   }
 
     //CHECK FOR GTAG - MUST HAVE FOR THINGS TO WORK
     function acuityCheckGtag(){
-      if(acuityToGA4Event){
+      if(acuityToGA4Event || acuityToGoogleAds){
       if (typeof gtag === 'undefined') {
-        acuityDebugConsoleLog("🚨🚨🚨 gtag is not defined, please add the Google Analytics 4 tag OR GOOGLE ADS gtag to your page");
+        acuityDebugConsoleLog("🚨🚨🚨🚨🚨🚨 gtag is not defined, please add the Google Analytics 4 tag OR GOOGLE ADS gtag to your page");
       } else {
-        acuityDebugConsoleLog("👍 gtag is defined, you're good to go with Acuity to GA4 event & Google Ads conversion");
+        acuityDebugConsoleLog("✅ 👍 gtag is defined, you're good to go with Acuity to GA4 event & Google Ads conversion");
       }
       }
     }
@@ -71,7 +70,7 @@
 
     // ACUITY TO GOOGLE TAG MANAGER DATA LAYER  (non e-commerce version )
     try {
-      if(acuityToGTMDatalayer){
+      if(acuityToGTMDatalayer == true){
       dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
       dataLayer.push({
         event: "purchase",
@@ -112,7 +111,7 @@
   
     // ACUITY TO GOOGLE ANALYTICS 4 E-COMMERCE EVENT
     try {
-      if(acuityToGA4Event){
+      if(acuityToGA4Event == true){
         acuityDebugConsoleLog("👋 Sending Acuity conversion GA4 event");
         // make a GA4 purchase version based on the the Google Tag Manager data layer  version above
         gtag("event", "purchase", {
@@ -166,7 +165,7 @@
       try {
 
          // ACUITY TO GOOGLE ADS CONVERSION EVENT
-    if(acuityToGoogleAds){
+    if(acuityToGoogleAds == true){
       acuityDebugConsoleLog("👋 Google Ads conversion event sending to: " + GoogleAdsIDAndLabel + " with price: " + data.Price + " and transaction ID: " + data.ID);
       gtag('event', 'conversion', {
         'send_to': GoogleAdsIDAndLabel,
@@ -200,7 +199,7 @@
 
     // ACUITY TO META PIXEL - PURCHASE EVENT WITH PRICE
     try {
-      if(acuityToMetaPixelPurchase){
+      if(acuityToMetaPixelPurchase == true){
         acuityDebugConsoleLog("👋 Sending Acuity conversion Meta Pixel PURCHASE event");
         fbq('track', 'Purchase', {currency: acuityCurrency, value: data.Price });
       } // end if acuityToMetaPixelPurchase
@@ -213,7 +212,7 @@
 
     // ACUITY TO META PIXEL - SCHEDULE EVENT
     try {
-      if(acuityToMetaPixelSchedule){
+      if(acuityToMetaPixelSchedule == true ){
         acuityDebugConsoleLog("👋 Sending Acuity conversion Meta Pixel SCHEDULE event");
         //fbq('track', 'Schedule', {currency: acuityCurrency, value: data.Price }); // CAN we add a value here?
         fbq('track', 'Schedule');
@@ -304,3 +303,14 @@ gtag("event", "purchase", {
       }
       );
       */
+
+
+      //send simple GTAG test event to GA4
+      /*
+      gtag("event", "test", {
+        "event_category": "test",
+        "event_label": "test",
+        "value": 100
+      });
+      */
+     
