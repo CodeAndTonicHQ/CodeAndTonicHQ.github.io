@@ -1,13 +1,48 @@
-  //Debugger function that console logs the data if acuityDebug = true
+
+/*
+// GA4 e-commerce event
+  var acuityToGA4Event = true;
+  var acuityBrandName = "Acme Inc.";
+  
+   var acuityToGoogleAds = true;
+   var GoogleAdsIDAndLabel = "AW-402734751/ivFWCLeWr44YEJ_9hMAB"; // both the ID and the label, separated by a slash
+
+  //Meta Pixel
+  var acuityToMetaPixelPurchase = true;
+  var acuityToMetaPixelSchedule = true;
+
+  // GTM data layer, if using within GTM, fire this tag on all pages
+  var acuityToGTMDatalayer = false;
+
+  // Debugging, set to true to see console logs
+  var acuityDebug = true;
+
+
+  now console log each of the variables to make sure they are set correctly
+*/ 
+
+
+//Debugger function that console logs the data if acuityDebug = true
   function acuityDebugConsoleLog(what){
     if(acuityDebug ){
       console.log(what);
     }
   }
 
+    // ACUITY TO GOOGLE ANALYTICS 4 E-COMMERCE EVENT
+    console.log("acuityDebug is set to: " + acuityDebug);
+    acuityDebugConsoleLog("acuityToGA4Event is set to: " + acuityToGA4Event);
+    acuityDebugConsoleLog("acuityBrandName is set to: " + acuityBrandName);
+    acuityDebugConsoleLog("acuityToMetaPixelPurchase is set to: " + acuityToMetaPixelPurchase);
+    acuityDebugConsoleLog("acuityToMetaPixelSchedule is set to: " + acuityToMetaPixelSchedule);
+    acuityDebugConsoleLog("acuityToGTMDatalayer is set to: " + acuityToGTMDatalayer);
+    acuityDebugConsoleLog("acuityToGoogleAds is set to: " + acuityToGoogleAds);
+    acuityDebugConsoleLog("GoogleAdsIDAndLabel is set to: " + GoogleAdsIDAndLabel);
+
+
     //CHECK FOR GTAG - MUST HAVE FOR THINGS TO WORK
     function acuityCheckGtag(){
-      if(acuityToGA4Event || acuityToGoogleAds){
+      if(acuityToGA4Event == true || acuityToGoogleAds == true){
       if (typeof gtag === 'undefined') {
         acuityDebugConsoleLog("🚨🚨🚨🚨🚨🚨 gtag is not defined, please add the Google Analytics 4 tag OR GOOGLE ADS gtag to your page");
       } else {
@@ -140,6 +175,9 @@
      
   
       } // end if acuityToGA4Event
+      else {
+        acuityDebugConsoleLog("acuityToGA4Event is false, so not attempting to sending GA4 event");
+      }
       
     } catch (err) {
       // error handling
@@ -173,6 +211,8 @@
         'currency': acuityCurrency,
         'transaction_id': data.ID
       });
+    } else{
+      acuityDebugConsoleLog("acuityToGoogleAds is false, so not attempting to sending Google Ads event");
     }
       
       } catch (err) {
@@ -203,6 +243,9 @@
         acuityDebugConsoleLog("👋 Sending Acuity conversion Meta Pixel PURCHASE event");
         fbq('track', 'Purchase', {currency: acuityCurrency, value: data.Price });
       } // end if acuityToMetaPixelPurchase
+      else{
+        acuityDebugConsoleLog("acuityToMetaPixelPurchase is false, so not attempting to sending Meta Pixel PURCHASE event");
+      }
       
     } catch (err) {
       // error handling
@@ -217,6 +260,9 @@
         //fbq('track', 'Schedule', {currency: acuityCurrency, value: data.Price }); // CAN we add a value here?
         fbq('track', 'Schedule');
       } // end if acuityToMetaPixelSchedule
+      else{
+        acuityDebugConsoleLog("acuityToMetaPixelSchedule is false, so not attempting to sending Meta Pixel SCHEDULE event");
+      }
     } catch (err) {
       // error handling
       acuityDebugConsoleLog("Facebook pixel schedule didin't work. Error is: " + err);
