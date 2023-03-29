@@ -1,4 +1,5 @@
 // 14.3.2023 updated formats, aud, NZD, symbol before price
+//29.3.2023, removed EUR default status, now false
 
 //symbol = dropdown format. formatOptions.symbol = price format
 const currencies = {
