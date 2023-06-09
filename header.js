@@ -408,7 +408,7 @@ console.log("not a product page");
  * TradeMark Disclaimer Google Ads Stuff
  */
 
-
+/*
 function prependTrademarkDisclaimer(shopifyOrSquarespace, urlpart, pendingOrEligible){
   if( window.location.href.includes("/p/") && window.location.href.includes(urlpart) ){
     if (shopifyOrSquarespace.includes("uarespace")){
@@ -432,9 +432,10 @@ function prependTrademarkDisclaimer(shopifyOrSquarespace, urlpart, pendingOrElig
     }); 
   }
 }
+*/
 
 
-prependTrademarkDisclaimer("Squarespace", "shop/p/dark-mode-plugin-for-squarespace", "eligible");
-prependTrademarkDisclaimer("Squarespace", "shop/p/full-width-blocks", "eligible");
-prependTrademarkDisclaimer("Shopify", "/shop/p/hide-sold-out-shopify-variants", "eligible");
+//prependTrademarkDisclaimer("Squarespace", "shop/p/dark-mode-plugin-for-squarespace", "eligible");
+//prependTrademarkDisclaimer("Squarespace", "shop/p/full-width-blocks", "eligible");
+//prependTrademarkDisclaimer("Shopify", "/shop/p/hide-sold-out-shopify-variants", "eligible");
 //prependTrademarkDisclaimer("Squarespace", "/shop/p/acuity-scheduling-redirect-forward-plugin", "eligible");
